@@ -7,7 +7,7 @@
 # 4. El tipo de dato de las variables viene dado por su inicialización
 # cast -> casting de variables
 
-edad = 22 
+edad = 22
 nombre = 'Anderson'
 # La declaración de os flotantes es con un punto
 ira = 37.2 
