@@ -3,9 +3,6 @@
 # String es un tipo de dato inmutable
 # Inmutable quiere decir que no acepta la reasiganción
 
-from torch import le
-
-
 x = 'Hola'
 y = ' con todos'
 
@@ -129,4 +126,3 @@ print(cadenaTexto2.startswith('Las'))
 #Validar si termina con ...
 print(cadenaTexto2.endswith('parque'))
 print(cadenaTexto2.endswith('cine'))
-
