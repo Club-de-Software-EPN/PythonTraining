@@ -67,7 +67,7 @@ print('4: Hola mi nombre es {variableNombre} y mi edad es {variableEdad} y tengo
 # 2. Indexación
 # 'Python'
 # |0|1|2|3|4|5|
-cadenaTexto = 'Este es un curso de programación'
+cadenaTexto = 'Este es un curso de programación muy buen curso'
 print(cadenaTexto[0])
 print(cadenaTexto[2])
 # Range -> rango
@@ -93,8 +93,40 @@ print(letra)
 letra = 'A'
 print(letra)
 
+# Indexación en rangos
+# [valorIncluido, valorExcluido]
+# [0,2)
+print(cadenaTexto[0:2])
+print(cadenaTexto[0:10])
+print(cadenaTexto[2:20])
+print(cadenaTexto[2:20:3]) # agregar un salto
+# Indíce hasta el final
+print(cadenaTexto[2:])
+# desde el comienzo hasta el índice
+print(cadenaTexto[:3]) #Est
+# Necesito todo el contenido
+print(cadenaTexto[:])
+print(cadenaTexto[::])
 
+# Ejercicio: Invierta toda la variable cadenaTexto
+cadenaInvertida = cadenaTexto[::-1]
+print(cadenaInvertida)
 
-
-
+# Funciones en python
+print(cadenaTexto.upper())
+print(cadenaTexto.lower())
+print(cadenaTexto.capitalize())
+#Encontrar algo en tu cadena de texto
+# en caso de encontrar se devuelve el índice de la primera coindencia
+print(cadenaTexto.find('curso'))
+print('Animales: tigre'.find('tigre'))
+# Si el substring que busco no existe ptyhon me devuelve -1
+print('Animales: tigre'.find('perro'))
+cadenaTexto2= 'Los niños juegan en el parque'
+# Validar si empiezo con...
+print(cadenaTexto2.startswith('Los'))
+print(cadenaTexto2.startswith('Las'))
+#Validar si termina con ...
+print(cadenaTexto2.endswith('parque'))
+print(cadenaTexto2.endswith('cine'))
 
