@@ -10,6 +10,9 @@
 • Enlace documentación recomendada para métodos:
 https://www.w3schools.com/python/
 
+• Enlace Operadore en Python
+https://www.freecodecamp.org/espanol/news/operadores-basicos-en-python-con-ejemplos/
+
 ### Tipos de Datos en Python
 
 > Primitivos
