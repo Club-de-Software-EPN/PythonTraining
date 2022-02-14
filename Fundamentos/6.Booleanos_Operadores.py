@@ -1,4 +1,4 @@
-## Booleanos
+## Booleanos -> bool()
 # Dos tipos
 # False y True
 
