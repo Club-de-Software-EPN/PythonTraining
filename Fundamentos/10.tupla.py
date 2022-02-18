@@ -1,6 +1,9 @@
 # Tupla -> tuple
 # Inmutable 
 
+from sqlalchemy import tuple_
+
+
 tupla1 = (3,4,5,6,6)
 print(tupla1)
 print(type(tupla1))
@@ -29,3 +32,9 @@ dimensiones = (500,600)
 dimensionX, dimensionY = dimensiones
 print(dimensionX)
 print(dimensionY)
+
+
+# COnvertir de una lista hacia tupla
+lista1 = [85,26,98]
+miTupla = tuple(lista1)
+print(miTupla)
