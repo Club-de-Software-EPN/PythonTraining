@@ -32,6 +32,15 @@ def main():
     # Condicionales
     if opcionMenu == '1':
         print('Submenu ingresa los nombre')
-    
+    elif opcionMenu == '2':
+        print('Cambiar piezas')
+    elif opcionMenu == '3':
+        print('Jugando....')
+    elif opcionMenu == '4':
+        print('Saliendo')
+    else:
+        print('Por favor ingrese una opción válida')
+
+
 
 main()
