@@ -56,14 +56,25 @@ def cambiarPiezas():
     print('\n\tPiezas')    
     print('1. Cambiar pieza del jugador 1')
     print('2. Cambiar pieza del jugador 2')
-    opcionPieza = input('Cambiar nombre del jugador: ')    
-
+    opcionPieza = input('Cambiar pieza del jugador: ')    
+    global piezaJugador1
+    global piezaJugador2
     if opcionPieza == '1':
-        global piezaJugador1
-        piezaJugador1 = input('Pieza del jugador 1: ')        
+        print('Opcion 1')
+        auxPieza1 = input('Pieza del jugador 1: ')       
+        if  auxPieza1 != piezaJugador2:
+            global piezaJugador1   
+            piezaJugador1 = auxPieza1
+        else:
+            print('La pieza ingresada es igual a la del otro jugador')
+
     elif opcionPieza == '2':
-        global piezaJugador2
-        piezaJugador2 = input('Pieza del jugador 2: ')
+        auxPieza2 = input('Pieza del jugador 2: ')  
+        if auxPieza2 != piezaJugador1:            
+            piezaJugador2 = auxPieza2
+        else:
+            print('La pieza ingresada es igual a la del otro jugador')
+
     else:
         print('Ingrese una opción válida')
 
@@ -72,6 +83,9 @@ def cambiarPiezas():
 def jugar():
     print('Jugando....')
     print('Es turno del jugador',nombreJugador1)
+    print('Es turno del jugador 2',nombreJugador2)
+    print('Pieza 1',piezaJugador1)
+    print('Pieza 2',piezaJugador2)
 
 def mostrarTablero():
     pass
@@ -84,7 +98,7 @@ def main():
     if opcionMenu == '1':
        nombreJugadores()    
     elif opcionMenu == '2':
-        print('Cambiar piezas')
+        cambiarPiezas()
     elif opcionMenu == '3':
         jugar()
     elif opcionMenu == '4':
