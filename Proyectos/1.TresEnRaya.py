@@ -79,7 +79,6 @@ def cambiarPiezas():
         print('Ingrese una opción válida')
 
 
-
 def jugar():
     print('Jugando....')
     print('Es turno del jugador',nombreJugador1)
@@ -104,8 +103,6 @@ def main():
     elif opcionMenu == '4':
         print('Saliendo')
     else:
-        print('Por favor ingrese una opción válida')
-    
-    jugar()
+        print('Por favor ingrese una opción válida')      
 
 main()
