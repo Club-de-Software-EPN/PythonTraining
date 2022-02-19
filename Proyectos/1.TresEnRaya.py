@@ -13,6 +13,13 @@
 # Y la tercera opción será jugar
 # Y la cuarta salir
 
+global nombreJugador1
+nombreJugador1 = 'Jugador 1'
+
+global nombreJugador2
+nombreJugador2 = 'Jugador 2'
+
+
 def menu():
     print('\n\tTres en raya\n')
     print('1. Nombres jugadores')
@@ -23,24 +30,36 @@ def menu():
     #print('Dsde adentro de la fun menu:',opcion)
     return opcion
 
+def nombreJugadores():
+    print('\n\tNombre jugadores')    
+    print('1. Cambiar nombre del jugador 1')
+    print('2. Cambiar nombre del jugador 2')
+    opcionNombre = input('Cambiar nombre del jugador: ')
+    if opcionNombre == '1':
+        nombreJugador1 = input('Nombre del jugador 1: ')
+
+def jugar():
+    print('Jugando....')
+    print('Es turno del jugador',nombreJugador1)
 
 def mostrarTablero():
     pass
 
 def main():
     opcionMenu = menu()  # Va a ejcutar la función menú y tambipne va asignar el retorno a mi variable
+    
     # Condicionales
     if opcionMenu == '1':
-        print('Submenu ingresa los nombre')
+       nombreJugadores()    
     elif opcionMenu == '2':
         print('Cambiar piezas')
     elif opcionMenu == '3':
-        print('Jugando....')
+        jugar()
     elif opcionMenu == '4':
         print('Saliendo')
     else:
         print('Por favor ingrese una opción válida')
-
-
+    
+    jugar()
 
 main()
