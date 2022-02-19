@@ -13,11 +13,18 @@
 # Y la tercera opción será jugar
 # Y la cuarta salir
 
+
+from glob import glob
+
+
 global nombreJugador1
 nombreJugador1 = 'Jugador 1'
-
 global nombreJugador2
 nombreJugador2 = 'Jugador 2'
+global piezaJugador1
+piezaJugador1 = 'X'
+global piezaJugador2
+piezaJugador2 = 'O'
 
 
 def menu():
@@ -34,9 +41,33 @@ def nombreJugadores():
     print('\n\tNombre jugadores')    
     print('1. Cambiar nombre del jugador 1')
     print('2. Cambiar nombre del jugador 2')
-    opcionNombre = input('Cambiar nombre del jugador: ')
+    opcionNombre = input('Cambiar nombre del jugador: ')    
+ 
     if opcionNombre == '1':
-        nombreJugador1 = input('Nombre del jugador 1: ')
+        global nombreJugador1
+        nombreJugador1 = input('Nombre del jugador 1: ')        
+    elif opcionNombre == '2':
+        global nombreJugador2
+        nombreJugador2 = input('Nombre del jugador 2: ')
+    else:
+        print('Ingrese una opción válida')
+
+def cambiarPiezas():
+    print('\n\tPiezas')    
+    print('1. Cambiar pieza del jugador 1')
+    print('2. Cambiar pieza del jugador 2')
+    opcionPieza = input('Cambiar nombre del jugador: ')    
+
+    if opcionPieza == '1':
+        global piezaJugador1
+        piezaJugador1 = input('Pieza del jugador 1: ')        
+    elif opcionPieza == '2':
+        global piezaJugador2
+        piezaJugador2 = input('Pieza del jugador 2: ')
+    else:
+        print('Ingrese una opción válida')
+
+
 
 def jugar():
     print('Jugando....')
@@ -46,6 +77,7 @@ def mostrarTablero():
     pass
 
 def main():
+  
     opcionMenu = menu()  # Va a ejcutar la función menú y tambipne va asignar el retorno a mi variable
     
     # Condicionales
