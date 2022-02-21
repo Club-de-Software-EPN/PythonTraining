@@ -1,7 +1,4 @@
 # Una función genérica que permita crear una matriz
-from matplotlib.pyplot import table
-from sklearn.pipeline import make_union
-
 
 def crearMatriz():
     matriz = []
@@ -13,14 +10,20 @@ def crearMatriz():
         for j in range(0,nColumnas):
             mensaje = f'Ingrese el valor de la fila {i+1} en la columna {j+1}: '
             matriz[i][j] = int(input(mensaje))
-    return matriz
+    dimensiones = (nFilas,nColumnas)
+    return matriz, dimensiones
 
 # Una funcion genérica para imprimir por consola cualquier matriz
-def mostrarMatriz(matriz, shape):
-    pass
+def mostrarMatriz(matriz, dimensiones):
+    filas, columnas = dimensiones
+    for i in range(filas):
+        for j in range(columnas):
+            print(matriz[i][j], end='\t')
+        print('')
+
 
 def main():
-    tablero = crearMatriz()
-    print(tablero)
+    matriz,dimensiones = crearMatriz()    
+    mostrarMatriz(matriz, dimensiones)
 
 main()
