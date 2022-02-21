@@ -152,7 +152,6 @@ print(nombre2)
 print(nombres)
 print(nombre3)
 
-
 # Lista de listas
 matriz = [
     [0,1,0],

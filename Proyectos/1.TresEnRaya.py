@@ -13,10 +13,6 @@
 # Y la tercera opción será jugar
 # Y la cuarta salir
 
-
-from glob import glob
-
-
 global nombreJugador1
 nombreJugador1 = 'Jugador 1'
 global nombreJugador2
@@ -90,19 +86,20 @@ def mostrarTablero():
     pass
 
 def main():
-  
-    opcionMenu = menu()  # Va a ejcutar la función menú y tambipne va asignar el retorno a mi variable
-    
-    # Condicionales
-    if opcionMenu == '1':
-       nombreJugadores()    
-    elif opcionMenu == '2':
-        cambiarPiezas()
-    elif opcionMenu == '3':
-        jugar()
-    elif opcionMenu == '4':
-        print('Saliendo')
-    else:
-        print('Por favor ingrese una opción válida')      
+    terminarJuego = False  
+    while terminarJuego == False:
+        opcionMenu = menu()  # Va a ejcutar la función menú y tambipne va asignar el retorno a mi variable    
+        # Condicionales
+        if opcionMenu == '1':
+            nombreJugadores()    
+        elif opcionMenu == '2':
+            cambiarPiezas()
+        elif opcionMenu == '3':
+            jugar()
+        elif opcionMenu == '4':
+            print('\tGracias por jugar, te esperamos pronto')
+            terminarJuego = True
+        else:
+            print('Por favor ingrese una opción válida')             
 
 main()
