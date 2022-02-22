@@ -12,6 +12,10 @@
 # de los jugadores, y adempas escoger los caracteres, por defeco sera la x y e l o
 # Y la tercera opción será jugar
 # Y la cuarta salir
+# Además los resutados se guardarán en un archivo de texto con fecha hora.
+from random import randint
+
+from sqlalchemy import false
 
 global nombreJugador1
 nombreJugador1 = 'Jugador 1'
@@ -43,7 +47,9 @@ def mostrarMatriz(matriz, dimensiones):
         print('')
 
 
-def llenarMatriz(matriz, fila, columna, caracter):
+def llenarMatriz(matriz,caracter):
+    fila = int(input('Fila: '))
+    columna = int(input('Columna: '))
     matriz[fila-1][columna-1] = caracter       
 
 def menu():
@@ -98,15 +104,22 @@ def cambiarPiezas():
         print('Ingrese una opción válida')
 
 
-def jugar():
-    tablero, dimensiones = crearMatriz()
+def jugar(tablero,dimensiones):
+ 
     print('Jugando....')
-    print('Es turno del jugador',nombreJugador1)
-    print('Es turno del jugador 2',nombreJugador2)
-    print('Pieza 1',piezaJugador1)
-    print('Pieza 2',piezaJugador2)
-    mostrarMatriz(tablero,dimensiones)
-    
+    finalizado = False
+    turno = randint(1,2)
+    while finalizado == False:        
+        if turno == 1:
+            print('Es turno de: ',nombreJugador1)
+            llenarMatriz(tablero, piezaJugador1)
+            turno=2
+        else:
+            print('Es turno de: ',nombreJugador2)
+            llenarMatriz(tablero, piezaJugador2)  
+            turno=1      
+        mostrarMatriz(tablero,dimensiones)
+
 
 def mostrarTablero():
     pass
@@ -121,7 +134,8 @@ def main():
         elif opcionMenu == '2':
             cambiarPiezas()
         elif opcionMenu == '3':
-            jugar()
+            tablero, dimensiones = crearMatriz()
+            jugar(tablero,dimensiones)
         elif opcionMenu == '4':
             print('\tGracias por jugar, te esperamos pronto')
             terminarJuego = True
