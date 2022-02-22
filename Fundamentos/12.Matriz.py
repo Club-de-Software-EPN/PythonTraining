@@ -21,9 +21,14 @@ def mostrarMatriz(matriz, dimensiones):
             print(matriz[i][j], end='\t')
         print('')
 
+def llenarMatriz(matriz, fila, columna):
+    matriz[fila-1][columna-1] = 'X'
 
 def main():
     matriz,dimensiones = crearMatriz()    
+    mostrarMatriz(matriz, dimensiones)
+    llenarMatriz(matriz,2,2)
+    print('')
     mostrarMatriz(matriz, dimensiones)
 
 main()

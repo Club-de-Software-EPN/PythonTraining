@@ -22,6 +22,29 @@ piezaJugador1 = 'X'
 global piezaJugador2
 piezaJugador2 = 'O'
 
+def crearMatriz():
+    matriz = []
+    nFilas = 3
+    nColumnas = 3
+    for i in range(nFilas):
+        matriz.append(['-']*nColumnas)
+    #for i in range(0,nFilas):
+        #for j in range(0,nColumnas):
+            #mensaje = f'Ingrese el valor de la fila {i+1} en la columna {j+1}: '
+            #matriz[i][j] = int(input(mensaje))
+    dimensiones = (nFilas,nColumnas)
+    return matriz, dimensiones
+
+def mostrarMatriz(matriz, dimensiones):
+    filas, columnas = dimensiones
+    for i in range(filas):
+        for j in range(columnas):
+            print(matriz[i][j], end='\t')
+        print('')
+
+
+def llenarMatriz(matriz, fila, columna, caracter):
+    matriz[fila-1][columna-1] = caracter       
 
 def menu():
     print('\n\tTres en raya\n')
@@ -76,17 +99,20 @@ def cambiarPiezas():
 
 
 def jugar():
+    tablero, dimensiones = crearMatriz()
     print('Jugando....')
     print('Es turno del jugador',nombreJugador1)
     print('Es turno del jugador 2',nombreJugador2)
     print('Pieza 1',piezaJugador1)
     print('Pieza 2',piezaJugador2)
+    mostrarMatriz(tablero,dimensiones)
+    
 
 def mostrarTablero():
     pass
 
 def main():
-    terminarJuego = False  
+    terminarJuego = False      
     while terminarJuego == False:
         opcionMenu = menu()  # Va a ejcutar la función menú y tambipne va asignar el retorno a mi variable    
         # Condicionales
