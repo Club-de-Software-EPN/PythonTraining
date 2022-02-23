@@ -109,16 +109,55 @@ def jugar(tablero,dimensiones):
     print('Jugando....')
     finalizado = False
     turno = randint(1,2)
-    while finalizado == False:        
+    
+    while finalizado == False:  
+        piezaActual = ''    
+        jugadorActual = ''     
         if turno == 1:
             print('Es turno de: ',nombreJugador1)
+            piezaActual = piezaJugador1
+            jugadorActual = nombreJugador1
             llenarMatriz(tablero, piezaJugador1)
             turno=2
         else:
             print('Es turno de: ',nombreJugador2)
+            piezaActual = piezaJugador2
+            jugadorActual = nombreJugador2
             llenarMatriz(tablero, piezaJugador2)  
             turno=1      
+
+        # validar cuando se hizo en raya
+        # True and False = False
+        #Horizontales
+        
+        if tablero[0][0] == piezaActual and tablero[0][1] == piezaActual and tablero[0][2] == piezaActual:
+                finalizado = True            
+        if tablero[1][0] == piezaActual and tablero[1][1] == piezaActual and tablero[1][2] == piezaActual:           
+                finalizado = True        
+        if tablero[2][0] == piezaActual and tablero[2][1] == piezaActual and tablero[2][2] == piezaActual:           
+                finalizado = True
+        
+        # Verticales
+        if tablero[0][0] == piezaActual and tablero[1][0] == piezaActual and tablero[2][0] == piezaActual:
+                finalizado = True            
+        if tablero[0][1] == piezaActual and tablero[1][1] == piezaActual and tablero[2][1] == piezaActual:
+                finalizado = True     
+        if tablero[0][2] == piezaActual and tablero[1][2] == piezaActual and tablero[2][2] == piezaActual:
+            finalizado = True  
+
+        # Diagonales
+        if tablero[0][0] == piezaActual and tablero[1][1] == piezaActual and tablero[2][2] == piezaActual:
+                finalizado = True            
+        if tablero[2][0] == piezaActual and tablero[1][1] == piezaActual and tablero[0][2] == piezaActual:
+                finalizado = True      
+
+        # En caso se haya llenado el tablero 
+        # Validar cuando se sobrescribe una posición ocupada                       
+        # validar cuando todos los espacios estan llenos            
         mostrarMatriz(tablero,dimensiones)
+
+    print('\tTres en raya!!!!!')
+    print('\tEl ganador es: ', jugadorActual)
 
 
 def mostrarTablero():

@@ -40,9 +40,6 @@ print(persona[21])
 print(persona[llaveVariable])
 print(persona['materias'])
 
-
-listaPrueba = [0,1,2,3,4]
-
 print('Métodos')
 # obtener un valor
 print(persona.get('edad'))
@@ -87,8 +84,29 @@ print(copiaPersona)
 # Numerable
 print(len(copiaPersona))
 
-# 
-#for i in listaPrueba:
-    #str(i): 
+# Eliminar todo
+copiaPersona.clear()
+print(copiaPersona)
+
+# COnversión entre lista y diccionario
+# 1
+listaPrueba = [0,1,2,3,4]
+diccionarioPrueba = {}
+for i in listaPrueba:
+    diccionarioPrueba[i] = i
+
+print(diccionarioPrueba)
+
+# 2
+diccionarioPrueba2 = {}
+listaLlave = ['n0','n1','n2','n3','n4']
+listaPrueba2 = [0,1,2,3,4]
+for i in range(len(listaLlave)):
+    diccionarioPrueba2[listaLlave[i]] = listaPrueba2[i]
+print(diccionarioPrueba2)
+
+# 3
+diccionarioPrueba3 = dict(zip(listaLlave,listaPrueba2))
+print(diccionarioPrueba3)
 
 #diccionario10 = {'valor1':1,'valor2':2}
