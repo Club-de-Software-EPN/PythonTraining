@@ -11,3 +11,6 @@ Edición 2022
 | 4 | Strings y sus métodos |07-02| https://us02web.zoom.us/rec/share/CYJtpETVwA3lym6m5sWhFVKq6r-f3aLpt3gxL5M8GrqwaSLoNfdKSfQKAoKWsTkP.rATMPFEBGQZpqw7Q?startTime=1644275426000 (Passcode: WjN6S^7T) |
 | 5 | Booleans y operadores | 08-02 | https://us02web.zoom.us/rec/share/ar-ufLwszUwnk7FmU1alHH5aTpUPce3LlfwaZ8wlmJu6KkMZERgmeAVjqsJy3k3Z.YeBf0h-p1jKfke2p?startTime=1644361722000 (Passcode: mBGY?2RV) |
 | 6 | Inicio proyecto | 11-02 | https://us02web.zoom.us/rec/share/lAj2CxXYbSiRXCs0cDvFgOdbcGTNV2TSzaInz85PDnpsfLEuJQX9LxwMV5IIQaNU.mE9jA9gDMwXpTPlS?startTime=1644621265000 (Passcode: UBU1fy&^) |
+| 7 | Tres en raya jugadores | 18-02 | https://us02web.zoom.us/rec/share/KXATMFPUn5XfwgwDyw1s5L9A1wzkxr4WY7aVVlKcOTb_9-yrecU7pkQEIQm99Kcx.Suq191iIeZE4ujpq?startTime=1645225747000 (Passcode: CQa9QL*d) |
+| 8 | Matriz y tres en raya | 21-02 | https://us02web.zoom.us/rec/share/c_rbzaQ7hY405ujSclUXU7JxJBkfLnZla2bIGLiXDxEfpQKlJz_xP9TefkHm2-s.vAozeWzKH6XI16Fa?startTime=1645485018000 (Passcode: Bt%Ml#6h)) |
+
