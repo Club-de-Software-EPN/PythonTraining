@@ -11,7 +11,7 @@ saludar()
 edades = [18,5,20,22,17,14.5,2]
 
 # Funciones
-# 1. Reciir parámetros
+# 1. Recibir parámetros
 def esMayorEdad(edad: int):
     if edad >= 18:
         return True
