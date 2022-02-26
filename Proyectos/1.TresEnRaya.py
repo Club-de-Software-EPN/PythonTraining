@@ -15,8 +15,6 @@
 # Además los resutados se guardarán en un archivo de texto con fecha hora.
 from random import randint
 
-from sqlalchemy import false
-
 global nombreJugador1
 nombreJugador1 = 'Jugador 1'
 global nombreJugador2
@@ -45,7 +43,6 @@ def mostrarMatriz(matriz, dimensiones):
         for j in range(columnas):
             print(matriz[i][j], end='\t')
         print('')
-
 
 def llenarMatriz(matriz,caracter):
     fila = int(input('Fila: '))
