@@ -12,7 +12,7 @@ class Personaje:
     # Métodos especiales get y set
     def getNombrePersonaje(self):
         return self.nombrePersonaje
-        
+
     def setNombrePersonaje(self, nuevoNombre: str):
         self.nombrePersonaje = nuevoNombre
     # Métodos
@@ -25,6 +25,7 @@ personaje2 = Personaje('Spiderman','Héroe',23)
 
 personaje1.saludar()
 personaje1.saludar()
+
 
 print('Nombre antes del set ',personaje2.getNombrePersonaje())
 personaje2.setNombrePersonaje('Venom')
