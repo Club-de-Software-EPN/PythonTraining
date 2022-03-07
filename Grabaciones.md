@@ -14,4 +14,7 @@ Edición 2022
 | 7 | Tres en raya jugadores | 18-02 | https://us02web.zoom.us/rec/share/KXATMFPUn5XfwgwDyw1s5L9A1wzkxr4WY7aVVlKcOTb_9-yrecU7pkQEIQm99Kcx.Suq191iIeZE4ujpq?startTime=1645225747000 (Passcode: CQa9QL*d) |
 | 8 | Matriz y tres en raya | 21-02 | https://us02web.zoom.us/rec/share/c_rbzaQ7hY405ujSclUXU7JxJBkfLnZla2bIGLiXDxEfpQKlJz_xP9TefkHm2-s.vAozeWzKH6XI16Fa?startTime=1645485018000 (Passcode: Bt%Ml#6h)) |
 | 9 | Diccionarios y fin tres en raya | 22-02 | https://us02web.zoom.us/rec/share/J38_BYm3i8pQW7NY3DTcNDo1qbZOTPN3O_QB0yyY3MysRRYX0kktI6y7DKTVV7Sv.kRsoHpH1jglDsPrb?startTime=1645571545000 (Passcode: JC&vP%W6) |
+| 10 | Funciones y fin fundamentos | 25-02 | https://us02web.zoom.us/rec/share/AGGFnbFhCHWn-kEcuGUBbXxd4BVTTzCgZPXjFNvofgvK-paNBG658qoR9-bywR4M.rHb_MhSuSowA5BAI?startTime=1645831036000 (Código de acceso: b1tgJh3!) |
+| 11 | POO y archivos | 04-03 | https://us02web.zoom.us/rec/share/9UtNhplAb4dVTb7hbx_hfdw3kOSCqFkQ0l4b77cBIfnbVd0Pee9GdG9hCF7Y3F-i.-nr0-1hdkbMWqSeW?startTime=1646435560000 (Código de acceso: 3z#$IW@=) |
+
 
