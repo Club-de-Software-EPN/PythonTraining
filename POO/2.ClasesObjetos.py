@@ -12,7 +12,6 @@ class Personaje:
     # Métodos especiales get y set
     def getNombrePersonaje(self):
         return self.nombrePersonaje
-
     def setNombrePersonaje(self, nuevoNombre: str):
         self.nombrePersonaje = nuevoNombre
     # Métodos

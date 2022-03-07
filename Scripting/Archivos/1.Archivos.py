@@ -4,9 +4,9 @@
 
 # Modos de tomar un archivo: w,r,a
 # En windows:
-# wt wb
-# rt rb
-# at ab
+# wt wb w+
+# rt rb r+ = 'read + write'
+# at ab a+
 
 miArchivo = open('Scripting/Archivos/ejemplo.txt', 'r')
 print(type(miArchivo))

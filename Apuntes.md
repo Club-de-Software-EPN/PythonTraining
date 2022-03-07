@@ -44,3 +44,7 @@ https://www.freecodecamp.org/espanol/news/operadores-basicos-en-python-con-ejemp
 >> Complex
 
 >> Datetime
+
+### Comandos para instalación
+> Instalar un paquete (librería)
+>> pip3 install "nombreLibreria"
