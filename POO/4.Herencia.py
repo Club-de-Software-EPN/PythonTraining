@@ -1,6 +1,4 @@
 # Herencia
-from sympy import viete
-
 
 class Personaje:
     def __init__(self, nombre):
