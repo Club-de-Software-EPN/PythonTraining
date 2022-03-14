@@ -1,5 +1,4 @@
-# Multiherencia
-
+# MRO -> Method Resolution Order
 from Personaje import Personaje
 
 class Villano(Personaje):
@@ -23,8 +22,5 @@ class PersonajeNeutral(Villano, SuperHeroe):
     def decirDialogo(self):
         print('Estoy diciendo algo')
 
-personaje = PersonajeNeutral('Anderson', 'Malo','Bueno')
-personaje.decirDialogo()
-personaje.hacerElBien()
-personaje.destruirMundo()
-personaje.saludar()
+neutral = PersonajeNeutral('Anderson','malo','respetuoso')
+print(PersonajeNeutral.mro())
