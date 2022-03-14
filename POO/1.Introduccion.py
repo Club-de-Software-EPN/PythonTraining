@@ -16,6 +16,7 @@ class Alumno:
 # Instanciar una clase -> objeto
 curso1 = Curso()
 curso2 = Curso()
+
 print(type(curso1))
 
 cursos = [curso1, curso2]
