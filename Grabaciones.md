@@ -16,9 +16,9 @@ Edición 2022
 | 9 | Diccionarios y fin tres en raya | 22-02 | https://us02web.zoom.us/rec/share/J38_BYm3i8pQW7NY3DTcNDo1qbZOTPN3O_QB0yyY3MysRRYX0kktI6y7DKTVV7Sv.kRsoHpH1jglDsPrb?startTime=1645571545000 (Passcode: JC&vP%W6) |
 | 10 | Funciones y fin fundamentos | 25-02 | https://us02web.zoom.us/rec/share/AGGFnbFhCHWn-kEcuGUBbXxd4BVTTzCgZPXjFNvofgvK-paNBG658qoR9-bywR4M.rHb_MhSuSowA5BAI?startTime=1645831036000 (Código de acceso: b1tgJh3!) |
 | 11 | POO y archivos | 04-03 | https://us02web.zoom.us/rec/share/9UtNhplAb4dVTb7hbx_hfdw3kOSCqFkQ0l4b77cBIfnbVd0Pee9GdG9hCF7Y3F-i.-nr0-1hdkbMWqSeW?startTime=1646435560000 (Código de acceso: 3z#$IW@=) |
-| 11 | POO herencia y archivos | 07-03 | https://us02web.zoom.us/rec/share/BIh6pHM4tKUhFtpgaMjnyGq0fo71SQBexOK7lp0iiHZTSSsv-an8-Lfb3riYcG4w.Cw6JBbn1Cwes94fV?startTime=1646694729000 (Código de acceso: QN$b.C5B) |
-| 11 | Multiherencia, voz y traducción | 08-03 | https://us02web.zoom.us/rec/share/uzsP4NzNSoW9T5X5Wdyne47KlIrN4awaz90QP41Wl4405waD9qtlGU3bJetJsy--.PicIwcdoQhaz_CWy?startTime=1646781146000 (Código de acceso: @DQS$U*8) |
-| 11 | Dunder,MRO y PDF | 14-03 | https://us02web.zoom.us/rec/share/1UW8TEIerZesA49-FWy5b0AOBoCc-1CkmKVV5Sb3Ztm3BEq8FU3RoFsAFV7a85te.ddQWSQQ2BgFZxNOM?startTime=1647302157000 (Código de acceso: 0b*zT@vY)) |
+| 12 | POO herencia y archivos | 07-03 | https://us02web.zoom.us/rec/share/BIh6pHM4tKUhFtpgaMjnyGq0fo71SQBexOK7lp0iiHZTSSsv-an8-Lfb3riYcG4w.Cw6JBbn1Cwes94fV?startTime=1646694729000 (Código de acceso: QN$b.C5B) |
+| 13 | Multiherencia, voz y traducción | 08-03 | https://us02web.zoom.us/rec/share/uzsP4NzNSoW9T5X5Wdyne47KlIrN4awaz90QP41Wl4405waD9qtlGU3bJetJsy--.PicIwcdoQhaz_CWy?startTime=1646781146000 (Código de acceso: @DQS$U*8) |
+| 14 | Dunder,MRO y PDF | 14-03 | https://us02web.zoom.us/rec/share/1UW8TEIerZesA49-FWy5b0AOBoCc-1CkmKVV5Sb3Ztm3BEq8FU3RoFsAFV7a85te.ddQWSQQ2BgFZxNOM?startTime=1647302157000 (Código de acceso: 0b*zT@vY)) |
 
 
 
