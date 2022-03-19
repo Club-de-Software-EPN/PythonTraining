@@ -8,7 +8,7 @@ posicionesIniciales = {
     'monstruo': Posicion((0,0)),
     'fantasma': Posicion((100,50))
 }
-
+fondo = pygame.image.load('Proyectos/Pygame/assets/img/background.jpg')
 # Inicialización de una instancia pygame
 pygame.init()
 
@@ -34,6 +34,7 @@ moverAbajo = False
 while not finalizado:
     # Escenografía básica
     screen.fill(colorFondo)
+    screen.blit(fondo,(0,0))
 
     # Eventos (gestor de eventos de pygame)
     for event in pygame.event.get():
@@ -79,7 +80,11 @@ while not finalizado:
         fantasma.posicion.setX(0)
     elif coordenadasPersonaje[0] > 500:
         fantasma.posicion.setX(500)
-
+    if coordenadasPersonaje[1] < 0:
+        fantasma.posicion.setY(0)
+    elif coordenadasPersonaje[1] > 320:
+        fantasma.posicion.setY(320)
+    
 
     # Render elementos
     # Elementos dinámicos
