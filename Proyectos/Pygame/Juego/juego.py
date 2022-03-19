@@ -25,6 +25,12 @@ finalizado = False
 fantasma = Fantasma(posicionesIniciales['fantasma'], screen)
 monstruo = Monstruo(posicionesIniciales['monstruo'], screen)
 
+
+moverIzquierda = False
+moverDerecha = False
+moverArriba = False
+moverAbajo = False
+
 while not finalizado:
     # Escenografía básica
     screen.fill(colorFondo)
@@ -34,6 +40,47 @@ while not finalizado:
         # Evento cerrar una ventana
         if event.type == pygame.QUIT:
             finalizado = True
+        # Eventos del teclado
+        # Con tecla presionada
+        if event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_LEFT:
+                moverIzquierda = True
+            if event.key == pygame.K_RIGHT:
+                moverDerecha = True
+            if event.key == pygame.K_UP:
+                moverArriba = True
+            if event.key == pygame.K_DOWN:
+                moverAbajo = True
+        # Con tecla levantada
+        elif event.type == pygame.KEYUP:
+            if event.key == pygame.K_LEFT:
+                moverIzquierda = False
+            if event.key == pygame.K_RIGHT:
+                moverDerecha = False
+            if event.key == pygame.K_UP:
+                moverArriba = False
+            if event.key == pygame.K_DOWN:
+                moverAbajo = False              
+
+    # Efectuar movimientos
+    if moverIzquierda:
+        fantasma.posicion.setX(fantasma.posicion.obtenerCoordenadas()[0]-1)
+    elif moverDerecha:
+        fantasma.posicion.setX(fantasma.posicion.obtenerCoordenadas()[0]+1)
+    elif moverArriba:
+        fantasma.posicion.setY(fantasma.posicion.obtenerCoordenadas()[1]-1)
+    elif moverAbajo:
+        fantasma.posicion.setY(fantasma.posicion.obtenerCoordenadas()[1]+1)
+
+    coordenadasPersonaje = fantasma.posicion.obtenerCoordenadas()
+
+    # Control de bordes
+    if coordenadasPersonaje[0] < 0:
+        fantasma.posicion.setX(0)
+    elif coordenadasPersonaje[0] > 500:
+        fantasma.posicion.setX(500)
+
+
     # Render elementos
     # Elementos dinámicos
     fantasma.dibujar()
