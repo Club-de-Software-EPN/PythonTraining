@@ -1,12 +1,12 @@
 import pygame
-from Personajes.Personajes import Fantasma
+from Personajes.Personajes import Fantasma, Monstruo
 from Personajes.Posicion import Posicion
 
 dimensionesPantalla = (600,500)
 colorFondo = (215, 255, 54)
 posicionesIniciales = {
     'monstruo': Posicion((0,0)),
-    'fantasma': Posicion((10,10))
+    'fantasma': Posicion((100,50))
 }
 
 # Inicialización de una instancia pygame
@@ -23,7 +23,7 @@ finalizado = False
 
 # Inicialización personajes
 fantasma = Fantasma(posicionesIniciales['fantasma'], screen)
-
+monstruo = Monstruo(posicionesIniciales['monstruo'], screen)
 
 while not finalizado:
     # Escenografía básica
@@ -37,5 +37,6 @@ while not finalizado:
     # Render elementos
     # Elementos dinámicos
     fantasma.dibujar()
+    monstruo.dibujar()
     # Actualizar la pantalla
     pygame.display.update()
