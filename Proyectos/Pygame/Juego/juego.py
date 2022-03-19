@@ -1,16 +1,34 @@
+import math
 import pygame
+from pygame import mixer
 from Personajes.Personajes import Fantasma, Monstruo
 from Personajes.Posicion import Posicion
 
 dimensionesPantalla = (600,500)
-colorFondo = (215, 255, 54)
+colorFondo = (4, 9, 76)
 posicionesIniciales = {
-    'monstruo': Posicion((0,0)),
+    'monstruo': Posicion((150,10)),
     'fantasma': Posicion((100,50))
 }
 fondo = pygame.image.load('Proyectos/Pygame/assets/img/background.jpg')
 # Inicialización de una instancia pygame
 pygame.init()
+puntos = 0
+# Fuentes
+fuente1 = pygame.font.Font('freesansbold.ttf',20)
+fuente2 = pygame.font.SysFont('Segoe UI',18)
+
+# Sonido
+mixer.music.load('Proyectos/Pygame/assets/audio.wav')
+mixer.music.play(-1)
+def mostrar_textos():
+    texto1 = fuente1.render('Puntos: '+str(puntos), True, (255,255,255))
+    texto2 = fuente1.render('Python Club de software EPN', True, (255,255,255))
+    texto3 = fuente1.render('Anderson Cárdenas', True, (255,255,255))
+    screen.blit(texto1,(25,440))
+    screen.blit(texto2,(280,430))
+    screen.blit(texto3,(292,455))
+
 
 # Configuraciones juego
 pygame.display.set_caption('Monstruos')
@@ -85,10 +103,18 @@ while not finalizado:
     elif coordenadasPersonaje[1] > 320:
         fantasma.posicion.setY(320)
     
+    d = math.sqrt((monstruo.posicion.obtenerCoordenadas()[0] - fantasma.posicion.obtenerCoordenadas()[0])**2+(monstruo.posicion.obtenerCoordenadas()[1] - fantasma.posicion.obtenerCoordenadas()[1])**2)
+
+    print('Distancia: ',d)
+    if d < 30:
+        grito = mixer.Sound('Proyectos/Pygame/assets/grito.wav')
+        grito.play()
+        puntos +=1
 
     # Render elementos
     # Elementos dinámicos
     fantasma.dibujar()
     monstruo.dibujar()
     # Actualizar la pantalla
+    mostrar_textos()
     pygame.display.update()
