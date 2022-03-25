@@ -1,4 +1,5 @@
-
+import tkinter as tk
+from tkinter import GROOVE, SUNKEN, ttk
 
 def center(win): 
     """ centers a tkinter window :param win: the main window or Toplevel window to center """ 
@@ -13,3 +14,14 @@ def center(win):
     y = win.winfo_screenheight() // 2 - win_height // 2 
     win.geometry('{}x{}+{}+{}'.format(width, height, x, y)) 
     win.deiconify()
+
+colorGris = '#B8B9AA'
+colorBlanco = '#F7F7F7'
+colorVerde = '#1BE518'
+colorAmarillo = '#F7FF00'
+
+def main():
+    root = tk.Tk()
+    root.title('Ejercicio 1')
+    root.geometry('800x550')
+    root.resizable(width=True, height=True)
