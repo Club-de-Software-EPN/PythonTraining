@@ -1,6 +1,7 @@
 import tkinter as tk
 from tkinter import GROOVE, SUNKEN, ttk
 from turtle import color
+from BaseDatos2 import BaseDatos
 
 from pandas import wide_to_long
 
@@ -13,6 +14,7 @@ fuenteGeneral = ('Courie',11,'normal')
 
 class Ventana:
     def __init__(self) -> None:
+        self.conexionDatos = BaseDatos('Usuarios')
         self.root = tk.Tk()
         self.root.title('Ejemplo 2')
         self.root.resizable(True,True)
@@ -61,10 +63,9 @@ class Ventana:
         cmbSexo = tk.ttk.Combobox(self.root, values=listaSexos, width=9)
         cmbSexo.place(x=100, y=230)
 
-
         def guardarInformacion2():
-             print(f'Información {inputNombre.get()} {inputApellido.get()} {inputEdad.get()} {inputEdad.get()}')
-
+            print(f'Información {inputNombre.get()} {inputApellido.get()} {inputEdad.get()} {cmbSexo.get()}')
+            self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), inputEdad.get(), cmbSexo.get())
 
         # Boton
         # width de los botones es un numero
