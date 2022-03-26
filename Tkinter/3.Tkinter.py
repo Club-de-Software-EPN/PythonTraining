@@ -1,6 +1,8 @@
 import tkinter as tk
-from tkinter import GROOVE, SUNKEN, Button, Frame, ttk
+from tkinter import GROOVE, SUNKEN, Button, Frame, Image, PhotoImage, ttk
 from tkinter import messagebox
+from PIL import ImageTk, Image
+from random import randint
 from utilidades import center
 
 colorGris = '#B8B9AA'
@@ -69,6 +71,41 @@ class Ventana:
                             )
         btnSumar.place(x=60,y=150)
 
+
+        # Frame 2 
+
+        frame2 = Frame(root, width=250, height=250, bd=3,
+                        bg=colorGris, relief='groove')
+        frame2.place(x=280,y=55)
+
+        def generarAleatorio():
+            valor = randint(1,6)
+            print('Valor: ', valor)
+        
+        imgbtn = Image.open('./dado.jpg')
+        imgbtn = imgbtn.resize((100,100), Image.ANTIALIAS)
+        imgbtn.save('./dado2.png')
+        imgbtn = PhotoImage(master=root, file='./dado2.png')
+
+        btnDado = tk.Button(root, image= imgbtn, text='', compound='top', command=generarAleatorio)
+        btnDado.pack()
+        btnDado.place(x=350,y=95)
+
+
+        def press():
+            pass
+
+        letras = ['a','b','c','d','e','f','g','h','i','j','k','l','m','n','o','p','q','r','s','t','u','v','w','x','y','z']
+
+        indiceLetras =0
+        inicioX = 300
+        inicioY = 320
+
+        for i in range(5):
+            for j in range(5):
+                a = ttk.Button(root, text=letras[indiceLetras], width=4, command=press)
+                a.place(x=inicioX+(j*40), y = inicioY+(i*30))
+                indiceLetras+=1
 
         root.mainloop()
 
