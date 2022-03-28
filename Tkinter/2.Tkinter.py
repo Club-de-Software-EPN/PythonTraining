@@ -2,8 +2,7 @@ import tkinter as tk
 from tkinter import GROOVE, SUNKEN, ttk
 from turtle import color
 from BaseDatos2 import BaseDatos
-
-from pandas import wide_to_long
+from utilidades import center
 
 colorVerde = '#C7FF89'
 colorAzul = '#042E6C'
@@ -16,9 +15,10 @@ class Ventana:
     def __init__(self) -> None:
         self.conexionDatos = BaseDatos('Usuarios')
         self.root = tk.Tk()
-        self.root.title('Ejemplo 2')
+        self.root.title('Usuarios')
         self.root.resizable(True,True)
         self.root.geometry('600x500')
+        center(self.root)
         self.root.configure(bg=colorVerde)
         self.dibujar()
 
