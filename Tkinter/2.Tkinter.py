@@ -48,6 +48,9 @@ class Ventana:
         lblSexo = tk.Label(self.root, text='Sexo:', bg=colorVerde, font=fuenteGeneral)
         lblSexo.place(x=20, y=230)
 
+        lblFormacion = tk.Label(self.root, text='Formación:', bg=colorVerde, font=fuenteGeneral)
+        lblFormacion.place(x=20, y=270)
+
         # Input
         inputNombre = tk.Entry(self.root, width=20)
         inputNombre.place(x=100,y=110)
@@ -58,22 +61,36 @@ class Ventana:
         inputEdad = tk.Entry(self.root)
         inputEdad.place(x=100,y=190)
 
-        listaSexos = ['M','F']
-        # Combobox
-        cmbSexo = tk.ttk.Combobox(self.root, values=listaSexos, width=9)
-        cmbSexo.place(x=100, y=230)
+        # Radio Button
+        radioSexo = tk.StringVar()
+        def selectSexo():
+            print(f'Opcion sexo seleccionada: {radioSexo.get()}')
+
+        radioM = tk.Radiobutton(self.root, text='Masculino', value='M', bg=colorVerde, 
+                                variable=radioSexo, command=selectSexo, tristatevalue=0)
+        radioM.place(x=100, y=230)
+
+        radioF = tk.Radiobutton(self.root, text='Femenino', value='F', bg=colorVerde, 
+                                variable=radioSexo, command=selectSexo, tristatevalue=0)
+        radioF.place(x=200, y=230)
+
+
+
+        # Combobox Formación Academica
+        listaFormacionAcademica = ['Educación Primaria','Educación Secundaria','Tecnología','Superior']
+        cmbFormacion = tk.ttk.Combobox(self.root, values=listaFormacionAcademica, width=21)
+        cmbFormacion.place(x=100, y=270)
 
         def guardarInformacion2():
             print(f'Información {inputNombre.get()} {inputApellido.get()} {inputEdad.get()} {cmbSexo.get()}')
             self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), inputEdad.get(), cmbSexo.get())
 
-        # Boton
         # width de los botones es un numero
         btnGuardar = tk.Button(self.root, text='Guardar\nInformación', font=fuenteGeneral, 
                     command=guardarInformacion2, width=15, height=2, bd=2,
                     bg=colorNegro, fg=colorBlanco,
                     relief=SUNKEN)
-        btnGuardar.place(x=250,y=300)
+        btnGuardar.place(x=250,y=330)
              
         # Main loop
         self.root.mainloop()
