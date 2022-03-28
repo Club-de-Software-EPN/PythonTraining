@@ -48,8 +48,11 @@ class Ventana:
         lblSexo = tk.Label(self.root, text='Sexo:', bg=colorVerde, font=fuenteGeneral)
         lblSexo.place(x=20, y=230)
 
+        lblCorreo = tk.Label(self.root, text='Correo:', bg=colorVerde, font=fuenteGeneral)
+        lblCorreo.place(x=20, y=270)
+
         lblFormacion = tk.Label(self.root, text='Formación:', bg=colorVerde, font=fuenteGeneral)
-        lblFormacion.place(x=20, y=270)
+        lblFormacion.place(x=20, y=310)
 
         # Input
         inputNombre = tk.Entry(self.root, width=20)
@@ -60,6 +63,9 @@ class Ventana:
 
         inputEdad = tk.Entry(self.root)
         inputEdad.place(x=100,y=190)
+
+        inputCorreo = tk.Entry(self.root)
+        inputCorreo.place(x=100,y=270)
 
         # Radio Button
         radioSexo = tk.StringVar()
@@ -74,12 +80,10 @@ class Ventana:
                                 variable=radioSexo, command=selectSexo, tristatevalue=0)
         radioF.place(x=200, y=230)
 
-
-
         # Combobox Formación Academica
         listaFormacionAcademica = ['Educación Primaria','Educación Secundaria','Tecnología','Superior']
         cmbFormacion = tk.ttk.Combobox(self.root, values=listaFormacionAcademica, width=21)
-        cmbFormacion.place(x=100, y=270)
+        cmbFormacion.place(x=100, y=310)
 
         def guardarInformacion2():
             print(f'Información {inputNombre.get()} {inputApellido.get()} {inputEdad.get()} {cmbSexo.get()}')
