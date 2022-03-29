@@ -1,5 +1,5 @@
 import tkinter as tk
-from tkinter import GROOVE, SUNKEN, Frame, ttk, NO
+from tkinter import GROOVE, SUNKEN, Frame, ttk, NO, messagebox
 from turtle import color
 from matplotlib.pyplot import text
 
@@ -70,6 +70,7 @@ class Ventana:
                     command=self.root.destroy, width=15, height=1, bd=2,
                     bg=colorVerdeOscuro, fg=colorBlanco,relief=SUNKEN)
         btnSalir.place(x=440,y=55)
+        
 
 # ---------------------  Frame Usuario -----------------------------#    
         self.frameUsuarios = Frame(self.root, width=600, height=400, bg=colorVerde, relief='sunken')
@@ -81,12 +82,21 @@ class Ventana:
 
         # Tabla
         columnas = ('nombre','apellido','edad','sexo','correo','formacion')
-        tblUsr = ttk.Treeview(self.frameUsuarios, height=5, columns=columnas, show='headings')
-        tblUsr.place(x=15, y=50)
+        tblUsr = ttk.Treeview(self.frameUsuarios, height=15, columns=columnas, show='headings')
+        tblUsr.place(x=15, y=60)
 
         for heading in columnas:
             tblUsr.heading(heading, text=heading)
             tblUsr.column(heading, minwidth=95, width=95, stretch=NO)
+
+        def llenarDatos():
+            data = self.conexionDatos.obtenerDatosUsuarios()
+            for fila in data:
+                tblUsr.insert('','end', values=fila)
+
+        btnLlenarDatos= tk.Button(self.frameUsuarios, text='Cargar Usuario', font=('Courie',10,'normal'), 
+                    command=llenarDatos, height=1, bd=2,bg=colorVerdeOscuro, fg=colorBlanco,relief=SUNKEN)
+        btnLlenarDatos.place(x=300,y=20)
 
 
 # ---------------------  Frame Registro -----------------------------#
@@ -147,16 +157,23 @@ class Ventana:
         cmbFormacion = tk.ttk.Combobox(self.frameRegistro, values=listaFormacionAcademica, width=21)
         cmbFormacion.place(x=100, y=310)
 
-        def guardarInformacion2():
-            print(f'Información {inputNombre.get()} {inputApellido.get()} {inputEdad.get()} {cmbSexo.get()}')
-            self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), inputEdad.get(), cmbSexo.get())
+        def guardarInformacion2():                        
+            try:
+                # Validar
+
+                # Guardar
+                self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), 
+                                                    inputEdad.get(), radioSexo.get(),inputCorreo.get(),
+                                                    cmbFormacion.get())
+            except:
+                messagebox.showwarning(message='Usuario no registrado', title=f'No se registró el usuario') 
 
         # width de los botones es un numero
         btnGuardar = tk.Button(self.frameRegistro, text='Guardar\nInformación', font=fuenteGeneral, 
                     command=guardarInformacion2, width=15, height=2, bd=2,
                     bg=colorNegro, fg=colorBlanco,
                     relief=SUNKEN)
-        btnGuardar.place(x=250,y=330)
+        btnGuardar.place(x=400,y=200)
              
 
 # Main loop

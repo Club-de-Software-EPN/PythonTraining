@@ -22,11 +22,19 @@ class BaseDatos:
         except:
             print('Error no se pudo conectar a esa instancia de la base de datos')
 
-    def insertarUsuario(self,nombre, apellido, edad, sexo):
-        valores = (nombre, apellido,edad, sexo)
+    def insertarUsuario(self,nombre, apellido, edad, sexo, correo, formacion):
+        idU=nombre
+        valores = (idU,nombre, apellido,edad, sexo, correo, formacion)
         sentenciaInsert = '''INSERT INTO public."Usuarios"(
-	        nombre, apellido, edad, sexo)
-	        VALUES (%s, %s, %s, %s);
+            id, nombre, apellido, edad, sexo, correo, formacion)
+	        VALUES (%s, %s, %s, %s, %s, %s, %s);
             '''
         self.cursor.execute(sentenciaInsert,valores)
         self.conexion.commit()
+
+    def obtenerDatosUsuarios(self):
+        self.cursor.execute('SELECT * FROM public."Usuarios";')
+        datosUsuarios = self.cursor.fetchall();
+        #for data in datosUsuarios:
+            #print(data)
+        return datosUsuarios
