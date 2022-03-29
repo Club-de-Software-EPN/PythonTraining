@@ -1,13 +1,16 @@
 import tkinter as tk
-from tkinter import GROOVE, SUNKEN, Frame, ttk
+from tkinter import GROOVE, SUNKEN, Frame, ttk, NO
 from turtle import color
+from matplotlib.pyplot import text
 
 from sympy import root
 from BaseDatos2 import BaseDatos
 from utilidades import center
 
-colorVerde = '#C7FF89'
+colorVerde = '#b4ffff'
+colorVerdeOscuro = '#003d33'
 colorAzul = '#042E6C'
+colorAmarillo = '#F1E790'
 colorNegro = '#000000'
 colorBlanco = '#FFFFFF'
 fuenteTitulos = ('Courie',14,'bold')
@@ -26,19 +29,69 @@ class Ventana:
         self.frameUsuarios = None
         self.dibujar()
  
-      
-
     def guardarInformacion(self, nombre: str, apellido: str, edad: int):
         print(f'Información {nombre} {apellido} {edad}')
 
     def saludar(self,texto):
         print('Dices', texto)
 
-    def dibujar(self):
-        titulo = tk.Label(self.root,text='Formulario', bg=colorVerde, font=fuenteTitulos)    
-        titulo.place(x=220,y=15)
+    def mostrarFrameRegistro(self):
+        #print('Mostrando frame registro')
+        self.ocultarTodosFrames()
+        self.frameRegistro.place(x=0,y=100)
 
-        self.frameRegistro = Frame(self.root, width=600, height=400, bg=colorAzul, relief='sunken')
+    def mostrarFrameUsuarios(self):
+        #print('Mostrando frame usuarios')
+        self.ocultarTodosFrames()
+        self.frameUsuarios.place(x=0,y=100)
+
+    def ocultarTodosFrames(self):
+        #print('Ocultando todos los frames')
+        self.frameRegistro.place_forget()
+        self.frameUsuarios.place_forget()
+
+    def dibujar(self):
+
+# ---------------------  Encabezado -----------------------------#
+        titulo = tk.Label(self.root,text='Sistema Manejo Usuarios', bg=colorVerde, font=fuenteTitulos)    
+        titulo.place(x=170,y=15)
+
+        btnRegistro = tk.Button(self.root, text='Registrar Usuarios', font=fuenteGeneral, 
+                    command=self.mostrarFrameRegistro, width=15, height=1, bd=2,
+                    bg=colorVerdeOscuro, fg=colorBlanco,relief=SUNKEN)
+        btnRegistro.place(x=40,y=55)
+
+        btnUsuarios= tk.Button(self.root, text='Usuarios', font=fuenteGeneral, 
+                    command=self.mostrarFrameUsuarios, width=15, height=1, bd=2,
+                    bg=colorVerdeOscuro, fg=colorBlanco,relief=SUNKEN)
+        btnUsuarios.place(x=240,y=55)
+
+        btnSalir= tk.Button(self.root, text='Salir', font=fuenteGeneral, 
+                    command=self.root.destroy, width=15, height=1, bd=2,
+                    bg=colorVerdeOscuro, fg=colorBlanco,relief=SUNKEN)
+        btnSalir.place(x=440,y=55)
+
+# ---------------------  Frame Usuario -----------------------------#    
+        self.frameUsuarios = Frame(self.root, width=600, height=400, bg=colorVerde, relief='sunken')
+        self.frameUsuarios.place(x=0,y=100)
+
+        texto1 = tk.Label(self.frameUsuarios, text='Datos de los usuarios', bg=colorVerde,
+                font=fuenteGeneral, fg=colorAzul)
+        texto1.place(x=20, y=20)
+
+        # Tabla
+        columnas = ('nombre','apellido','edad','sexo','correo','formacion')
+        tblUsr = ttk.Treeview(self.frameUsuarios, height=5, columns=columnas, show='headings')
+        tblUsr.place(x=15, y=50)
+
+        for heading in columnas:
+            tblUsr.heading(heading, text=heading)
+            tblUsr.column(heading, minwidth=95, width=95, stretch=NO)
+
+
+# ---------------------  Frame Registro -----------------------------#
+
+        self.frameRegistro = Frame(self.root, width=600, height=400, bg=colorVerde, relief='sunken')
         self.frameRegistro.place(x=0,y=100)
 
         texto1 = tk.Label(self.frameRegistro, text='Ingrese los datos a continuación', bg=colorVerde,
@@ -105,7 +158,8 @@ class Ventana:
                     relief=SUNKEN)
         btnGuardar.place(x=250,y=330)
              
-        # Main loop
+
+# Main loop
         self.root.mainloop()
 
 ventana = Ventana()
