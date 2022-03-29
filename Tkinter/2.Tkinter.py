@@ -1,11 +1,8 @@
 import tkinter as tk
 from tkinter import GROOVE, SUNKEN, Frame, ttk, NO, messagebox
-from turtle import color
-from matplotlib.pyplot import text
-
-from sympy import root
 from BaseDatos2 import BaseDatos
-from utilidades import center
+from utilidades import center, validarTexto, validarNumero, \
+                        validarCorreoElectronico
 
 colorVerde = '#b4ffff'
 colorVerdeOscuro = '#003d33'
@@ -160,11 +157,16 @@ class Ventana:
         def guardarInformacion2():                        
             try:
                 # Validar
-
+                validarCorreoElectronico(inputCorreo.get())
+                validarNumero(inputEdad.get(), 'Edad')
+                validarTexto(inputNombre.get(), 'Nombre')
+                validarTexto(inputApellido.get(), 'Apellido')               
                 # Guardar
                 self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), 
                                                     inputEdad.get(), radioSexo.get(),inputCorreo.get(),
                                                     cmbFormacion.get())
+                messagebox.showinfo(message=f'El usuario {inputNombre.get()} ha sido registrado', 
+                                    title=f'Usario Registrado') 
             except:
                 messagebox.showwarning(message='Usuario no registrado', title=f'No se registró el usuario') 
 

@@ -1,4 +1,6 @@
+from msilib.schema import Error
 from tkinter import messagebox
+import re
 
 def center(win): 
     """ centers a tkinter window :param win: the main window or Toplevel window to center """ 
@@ -15,13 +17,27 @@ def center(win):
     win.deiconify()
 
 def validarNumero(texto, campo):
-        try:
-            return int(texto)
-        except:
-            messagebox.showwarning(message='Solo se aceptan números', title=f'Error en el campo {campo}') 
+    try:
+        return int(texto)
+    except:
+        messagebox.showwarning(message='Solo se aceptan números', title=f'Error en el campo {campo}') 
 
 def validarTexto(texto, campo):
-    pass
+    try:
+        return str(texto)
+    except:
+        messagebox.showwarning(message='Solo se aceptan números', title=f'Error en el campo {campo}') 
 
 def validarCorreoElectronico(correo, campo='Correo electrónico'):
-    pass
+    try:
+        emailRegex = r'(^[\w]+)@(\w)+'
+        match = re.search(emailRegex, correo)
+        if match:
+            return correo
+        else:
+            messagebox.showerror(message='Formato no válido de correo', title=f'Error en el campo {campo}')
+            raise Error('error')
+    except ValueError:
+        print('Error')
+
+         

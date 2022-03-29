@@ -1,4 +1,5 @@
 import psycopg2
+import uuid
 
 class BaseDatos:
 
@@ -23,7 +24,7 @@ class BaseDatos:
             print('Error no se pudo conectar a esa instancia de la base de datos')
 
     def insertarUsuario(self,nombre, apellido, edad, sexo, correo, formacion):
-        idU=nombre
+        idU = str(uuid.uuid4())
         valores = (idU,nombre, apellido,edad, sexo, correo, formacion)
         sentenciaInsert = '''INSERT INTO public."Usuarios"(
             id, nombre, apellido, edad, sexo, correo, formacion)
@@ -33,7 +34,8 @@ class BaseDatos:
         self.conexion.commit()
 
     def obtenerDatosUsuarios(self):
-        self.cursor.execute('SELECT * FROM public."Usuarios";')
+        self.cursor.execute('''SELECT nombre, apellido, edad, sexo, correo, formacion
+	                    FROM public."Usuarios";''')
         datosUsuarios = self.cursor.fetchall();
         #for data in datosUsuarios:
             #print(data)
