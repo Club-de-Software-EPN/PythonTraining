@@ -1,6 +1,8 @@
 import tkinter as tk
-from tkinter import GROOVE, SUNKEN, ttk
+from tkinter import GROOVE, SUNKEN, Frame, ttk
 from turtle import color
+
+from sympy import root
 from BaseDatos2 import BaseDatos
 from utilidades import center
 
@@ -20,7 +22,11 @@ class Ventana:
         self.root.geometry('600x500')
         center(self.root)
         self.root.configure(bg=colorVerde)
+        self.frameRegistro = None
+        self.frameUsuarios = None
         self.dibujar()
+ 
+      
 
     def guardarInformacion(self, nombre: str, apellido: str, edad: int):
         print(f'Información {nombre} {apellido} {edad}')
@@ -31,6 +37,9 @@ class Ventana:
     def dibujar(self):
         titulo = tk.Label(self.root,text='Formulario', bg=colorVerde, font=fuenteTitulos)    
         titulo.place(x=220,y=15)
+
+        self.frameRegistro = Frame(self.root, width=600, height=400, bg=colorAzul, relief='sunken')
+        self.frameRegistro.place(x=0,y=100)
 
         texto1 = tk.Label(self.root, text='Ingrese los datos a continuación', bg=colorVerde,
                 font=fuenteGeneral, fg=colorAzul)
