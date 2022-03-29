@@ -41,39 +41,39 @@ class Ventana:
         self.frameRegistro = Frame(self.root, width=600, height=400, bg=colorAzul, relief='sunken')
         self.frameRegistro.place(x=0,y=100)
 
-        texto1 = tk.Label(self.root, text='Ingrese los datos a continuación', bg=colorVerde,
+        texto1 = tk.Label(self.frameRegistro, text='Ingrese los datos a continuación', bg=colorVerde,
                 font=fuenteGeneral, fg=colorAzul)
         texto1.place(x=20, y=60)
 
-        lblNombre = tk.Label(self.root, text='Nombre:', bg=colorVerde, font=fuenteGeneral)
+        lblNombre = tk.Label(self.frameRegistro, text='Nombre:', bg=colorVerde, font=fuenteGeneral)
         lblNombre.place(x=20, y=110)
 
-        lblApellido = tk.Label(self.root, text='Apellido:', bg=colorVerde, font=fuenteGeneral)
+        lblApellido = tk.Label(self.frameRegistro, text='Apellido:', bg=colorVerde, font=fuenteGeneral)
         lblApellido.place(x=20, y=150)
 
-        lblEdad = tk.Label(self.root, text='Edad:', bg=colorVerde, font=fuenteGeneral)
+        lblEdad = tk.Label(self.frameRegistro, text='Edad:', bg=colorVerde, font=fuenteGeneral)
         lblEdad.place(x=20, y=190)
         
-        lblSexo = tk.Label(self.root, text='Sexo:', bg=colorVerde, font=fuenteGeneral)
+        lblSexo = tk.Label(self.frameRegistro, text='Sexo:', bg=colorVerde, font=fuenteGeneral)
         lblSexo.place(x=20, y=230)
 
-        lblCorreo = tk.Label(self.root, text='Correo:', bg=colorVerde, font=fuenteGeneral)
+        lblCorreo = tk.Label(self.frameRegistro, text='Correo:', bg=colorVerde, font=fuenteGeneral)
         lblCorreo.place(x=20, y=270)
 
-        lblFormacion = tk.Label(self.root, text='Formación:', bg=colorVerde, font=fuenteGeneral)
+        lblFormacion = tk.Label(self.frameRegistro, text='Formación:', bg=colorVerde, font=fuenteGeneral)
         lblFormacion.place(x=20, y=310)
 
         # Input
-        inputNombre = tk.Entry(self.root, width=20)
+        inputNombre = tk.Entry(self.frameRegistro, width=20)
         inputNombre.place(x=100,y=110)
 
-        inputApellido = tk.Entry(self.root)
+        inputApellido = tk.Entry(self.frameRegistro)
         inputApellido.place(x=100,y=150)
 
-        inputEdad = tk.Entry(self.root)
+        inputEdad = tk.Entry(self.frameRegistro)
         inputEdad.place(x=100,y=190)
 
-        inputCorreo = tk.Entry(self.root)
+        inputCorreo = tk.Entry(self.frameRegistro)
         inputCorreo.place(x=100,y=270)
 
         # Radio Button
@@ -81,17 +81,17 @@ class Ventana:
         def selectSexo():
             print(f'Opcion sexo seleccionada: {radioSexo.get()}')
 
-        radioM = tk.Radiobutton(self.root, text='Masculino', value='M', bg=colorVerde, 
+        radioM = tk.Radiobutton(self.frameRegistro, text='Masculino', value='M', bg=colorVerde, 
                                 variable=radioSexo, command=selectSexo, tristatevalue=0)
         radioM.place(x=100, y=230)
 
-        radioF = tk.Radiobutton(self.root, text='Femenino', value='F', bg=colorVerde, 
+        radioF = tk.Radiobutton(self.frameRegistro, text='Femenino', value='F', bg=colorVerde, 
                                 variable=radioSexo, command=selectSexo, tristatevalue=0)
         radioF.place(x=200, y=230)
 
         # Combobox Formación Academica
         listaFormacionAcademica = ['Educación Primaria','Educación Secundaria','Tecnología','Superior']
-        cmbFormacion = tk.ttk.Combobox(self.root, values=listaFormacionAcademica, width=21)
+        cmbFormacion = tk.ttk.Combobox(self.frameRegistro, values=listaFormacionAcademica, width=21)
         cmbFormacion.place(x=100, y=310)
 
         def guardarInformacion2():
@@ -99,7 +99,7 @@ class Ventana:
             self.conexionDatos.insertarUsuario(inputNombre.get(), inputApellido.get(), inputEdad.get(), cmbSexo.get())
 
         # width de los botones es un numero
-        btnGuardar = tk.Button(self.root, text='Guardar\nInformación', font=fuenteGeneral, 
+        btnGuardar = tk.Button(self.frameRegistro, text='Guardar\nInformación', font=fuenteGeneral, 
                     command=guardarInformacion2, width=15, height=2, bd=2,
                     bg=colorNegro, fg=colorBlanco,
                     relief=SUNKEN)
