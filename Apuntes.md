@@ -48,3 +48,26 @@ https://www.freecodecamp.org/espanol/news/operadores-basicos-en-python-con-ejemp
 ### Comandos para instalación
 > Instalar un paquete (librería)
 >> pip3 install "nombreLibreria"
+
+
+## Recursos útiles
+
+### PEP 8
+
+Resumen: https://bioinf.comav.upv.es/courses/linux/python/estilo.html#:~:text=La%20comunidad%20de%20usuarios%20de,completo%20se%20denomina%20PEP%208.
+
+Guía Completa: https://peps.python.org/pep-0008/#imports
+
+### Publicar en Pypi
+
+https://medium.com/@joel.barmettler/how-to-upload-your-python-package-to-pypi-65edc5fe9c56
+
+### Patrones de diseño
+
+https://refactoring.guru/es/design-patterns
+
+### Calculo Numérico
+
+https://scipy.github.io/devdocs/index.html
+
+
