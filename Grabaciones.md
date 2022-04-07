@@ -22,7 +22,15 @@ Edición 2022
 | 15 | UML y PDF| 15-03 | https://us02web.zoom.us/rec/share/mzbREyjC4-8RIA4wIqw1c-vx2AWNFlsYlSJurMunfty-c7t7VTj493nQE9M8EZVS.EKL8-IbE_AqNb1HC?startTime=1647386029000 (Código de acceso: 8m+L^JFZ) |
 | 16 | Pygame | 18-03 | https://us02web.zoom.us/rec/share/olmAbKq9_sIQ5-QdQxF1_Uo7CKxylHNTJph60JlefgWGd-MGiq8DPDMmIYW5SFbx.5jkoID3Anj_Il6mE?startTime=1647644924000 (Código de acceso: 2#L1*2zF) |
 | 17 | Tkinter 1 | 21-03 | https://us02web.zoom.us/rec/share/CMUXXHIfAxv_-_qs5Wosis8T9y9hRNPFpwGZ2ksGZPR6eFkkexjMSI9T_h64v20T.EBib-d6K9nOY0VPI?startTime=1647904282000 (Código de acceso: fF$v*8$L) |
-| 17 | Tkinter 2 | 24-03 | https://us02web.zoom.us/rec/share/CMMGTxMUrB4zyfl7Zc8thNaLMQk2h3E4ZSBepHwBxk2kNDCpA0X9ZxP5jVGf5gmo.V_MgAqrRRcGDf_fX?startTime=1648163219000 (Código de acceso: m7Q&kHZ6) |
-| 17 | Tkinter 3 | 25-03 | https://us02web.zoom.us/rec/share/J4dEoj2SDeCxjVG-SVhE-tSCqa1ei2B-dBSN4Ow-wsyFfWeY8pTWD77JeitC0aJC.Izn66fp6MhIkCo9T?startTime=1648250069000 (Código de acceso: Bq?zL7MW) |
-| 17 | Tkinter 4 | 28-03 | ) |
+| 18 | Tkinter 2 | 24-03 | https://us02web.zoom.us/rec/share/CMMGTxMUrB4zyfl7Zc8thNaLMQk2h3E4ZSBepHwBxk2kNDCpA0X9ZxP5jVGf5gmo.V_MgAqrRRcGDf_fX?startTime=1648163219000 (Código de acceso: m7Q&kHZ6) |
+| 19 | Tkinter 3 | 25-03 | https://us02web.zoom.us/rec/share/J4dEoj2SDeCxjVG-SVhE-tSCqa1ei2B-dBSN4Ow-wsyFfWeY8pTWD77JeitC0aJC.Izn66fp6MhIkCo9T?startTime=1648250069000 (Código de acceso: Bq?zL7MW) |
+| 20 | Tkinter 4 | 28-03 | https://us02web.zoom.us/rec/share/JfqTzBsZPkQZmHmRsNjuRR88KoMRyH4_WGWbdABtiSe7T-uH1XP0fKIZy6XMasYf.Ei5Y1E-R3FQCttFI?startTime=1648595844000 (Código de acceso: Fhs24Kw&) |
+| 21 | Programación Funcional | 29-03 | https://us02web.zoom.us/rec/share/HL-zJAswGjpreFO86jOOnqvirFLAoOQHVGRLMoNKhkBrZIgZ32CPPKHOmySHCaoS.RX_ZC4xKm-0wyW6W?startTime=1648595844000 (Código de acceso: Fhs24Kw&) |
+| 22 | Temas teóricos | 31-03 | https://us02web.zoom.us/rec/share/KzYMgGLsjIYbmCGuiHl_Poc3adYCs_vOlFq4NzXFt2f6Kf_TV3xK1WXbBT-uUwFv.0TT5ysZ0IfXNiU8u?startTime=1648768441000 (Código de acceso: h?9uKH?5) |
+| 23 | Programación Funcional II | 01-04 | - |
+| 24 | Pandas | 04-04 | https://us02web.zoom.us/rec/share/S7GKyy-uk-rZI_pEs1398ON5iAIqj0OG9-68-l8nG_7OM63JqSz7N4BS3Hie36sH.h4zC1tcJhDeUaGr5?startTime=1649115483000 (Código de acceso: 3+xkM2##) |
+| 25 | Numpy | Pregrabado | - |
+| 26 | Matplotlib | Pregrabado | - |
+
+
 
